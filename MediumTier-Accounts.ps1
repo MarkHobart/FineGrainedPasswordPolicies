@@ -1,0 +1,2 @@
+New-ADFineGrainedPasswordPolicy -name "MediumPrivilegedGroups50" -Precedence 20 -MinPasswordLength 30 -PasswordHistoryCount 24 -MinPasswordAge 1 -MaxPasswordAge 42 -LockoutDuration "10675199" -LockoutThreshold 3 -LockoutObservationWindow "00:30" -ComplexityEnabled $true -ReversibleEncryptionEnabled $false -ProtectedFromAccidentalDeletion $true
+Add-ADFineGrainedPasswordPolicySubject -Identity "HighlyPrivilegedGroups" -Subjects "T2Admins"
